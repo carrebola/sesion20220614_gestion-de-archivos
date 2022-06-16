@@ -1,8 +1,12 @@
 # Gestión de archivos upload/delete mediante las librerias multer y fs-extra #
 
+- [Gestión de archivos upload/delete mediante las librerias multer y fs-extra](#gestión-de-archivos-uploaddelete-mediante-las-librerias-multer-y-fs-extra)
+  - [SESIÓN 20220614 Endpoint para borrar archivos mediante la librería fs-extra](#sesión-20220614-endpoint-para-borrar-archivos-mediante-la-librería-fs-extra)
+    - [Ruta para subir archivos](#ruta-para-subir-archivos)
+  - [SESIÓN 20220616 Endpoint para borrar archivos mediante la librería fs-extra](#sesión-20220616-endpoint-para-borrar-archivos-mediante-la-librería-fs-extra)
+      - [Tareas pendientes:](#tareas-pendientes)
 
-
-## SESIÓN 20220614 - Endpoint para borrar archivos mediante la librería fs-extra ##
+## SESIÓN 20220614 Endpoint para borrar archivos mediante la librería fs-extra ##
 1. cargamos express
 2. cargamos la libreria multer para gestionar subidas de archivos
 
@@ -19,7 +23,7 @@
 
 ---
 
-## SESIÓN 20220616 - Endpoint para borrar archivos mediante la librería fs-extra ##
+## SESIÓN 20220616 Endpoint para borrar archivos mediante la librería fs-extra ##
 
 8.  instalamos la librería **fs**
 9.  creamos endpoint `app.delete('files/:file)` para pasar el nombre del archivo por parámetro
