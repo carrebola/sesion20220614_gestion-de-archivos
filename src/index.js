@@ -1,4 +1,5 @@
 const express = require('express')
+const fs = require('fs-extra')
 
 // cargamos la libreria multer para gestionar subidas de archivos
 const multer = require('multer')
@@ -10,6 +11,8 @@ app.get('/', (req, res)=>{
     res.send('estas en raiz')
 })
 
+
+//***********  MULTER ******************/
 //definimos el nombre de los archivos y donde (ruta) se van a subir
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
@@ -35,6 +38,24 @@ app.post('/files', upload.single('file'), (req, res)=> {
     })
    }      
 })
+
+// *********** fs_extra **************************/
+
+app.delete('/files/:file', async (req, res)=> {
+    try {
+        const file = req.params.file
+        await fs.remove('archivos/'+file)
+        console.log('success!')
+         res.json({
+             mensaje: 'OK '+file+' ha sido borrado'
+         })
+    } catch (error) {
+     res.json({
+         mensaje: 'error',error
+     })
+    }      
+ })
+
 
 
 //levantamos servidor
